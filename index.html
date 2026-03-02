@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notan Visualizer | Premium Tone Study Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader-overlay" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <main class="container">
+        <header class="hero">
+            <h1 class="title">Notan <span>Studio</span></h1>
+            <p class="subtitle">Transform your vision into powerful light and shadow studies.</p>
+            
+            <div class="upload-section">
+                <input type="file" id="imageUpload" accept="image/*" class="file-input">
+                <label for="imageUpload" class="upload-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span>Upload Masterpiece</span>
+                </label>
+            </div>
+        </header>
+
+        <section class="workspace" id="workspace">
+            <div class="original-preview" id="originalPreview">
+                <div class="placeholder-msg">Upload an image to start the study</div>
+            </div>
+
+            <div class="notan-grid">
+                <!-- 2-Value Notan (Left) -->
+                <div class="notan-card" id="card2Value">
+                    <div class="card-header">
+                        <h2>2-Value Notan</h2>
+                        <span class="badge">B & W</span>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="notan2Value"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <button class="download-btn" id="download2V" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Export 2V
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3-Value Notan (Right) -->
+                <div class="notan-card" id="card3Value">
+                    <div class="card-header">
+                        <h2>3-Value Notan</h2>
+                        <span class="badge">B / G / W</span>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="notan3Value"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <button class="download-btn" id="download3V" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Export 3V
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 Notan Studio. Powerful Simplicity.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
